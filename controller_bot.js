@@ -4,7 +4,7 @@ const pool = require('./db');
 require('dotenv').config();
 
 const bot = new Telegraf(process.env.CONTROLLER_BOT_TOKEN);
-const ADMIN_IDS = ['6347842836', '7712850427'];
+const ADMIN_IDS = ['7712850427'];
 
 bot.command('allow', async (ctx) => {
     if (!ADMIN_IDS.includes(ctx.from.id.toString())) return;
